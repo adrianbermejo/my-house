@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle grass;
+    private Person aldeano;
     /**
      * Constructor for objects of class Picture
      */
@@ -62,7 +63,15 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
         
+        aldeano = new Person();
+        aldeano.moveHorizontal(-250);
+        aldeano.moveVertical(30);
+        aldeano.changeColor("black");
         
+        
+        
+        
+     
         
     }
 
@@ -98,6 +107,9 @@ public class Picture
         if (wall != null)   // only if it's painted already...
         {
             sun.slowMoveVertical(130);
+            aldeano.makeVisible();
+            aldeano.slowMoveHorizontal(160);
+           
         }
     }
 }
